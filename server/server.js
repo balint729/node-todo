@@ -21,9 +21,9 @@ app.post('/todos', (req,res) =>{
         res.send(doc);
         console.log('Todo inserted ',doc);
     }, (err) =>{
-        res.status(400);
-        res.send(err)
-        console.log('Unable to insert ', err);
+        res.status(400).send();
+        // res.send(err)
+        // console.log('Unable to insert ', err);
     });
 
 });
